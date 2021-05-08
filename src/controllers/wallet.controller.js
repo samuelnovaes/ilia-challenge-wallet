@@ -1,5 +1,5 @@
-class UserController {
+class WalletController {
 
 }
 
-module.exports = new UserController();
+module.exports = new WalletController();
