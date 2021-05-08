@@ -1,5 +1,9 @@
+require('dotenv').config();
+
 const app = require('./app');
 
-app.listen(3001, () => {
-	console.log('Wallet service running');
+const port = process.env.PORT || 3001;
+
+app.listen(port, () => {
+	console.log('Wallet service running on port', port);
 });
