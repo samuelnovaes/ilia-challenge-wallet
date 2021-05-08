@@ -6,8 +6,6 @@ const app = express();
 app.use(compression());
 app.use(cors());
 
-app.get('/', (req, res) => {
-	res.send(`WALLET ${process.env.NODE_ENV}`);
-});
+app.use('/wallets', require('./routes/wallets.route'));
 
 module.exports = app;
