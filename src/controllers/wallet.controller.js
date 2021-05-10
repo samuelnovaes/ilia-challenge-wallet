@@ -121,8 +121,8 @@ class WalletController {
 		const wallets = await Wallet.paginate({
 			userId
 		}, {
-			page,
-			limit
+			page: parseInt(page),
+			limit: parseInt(limit)
 		});
 		return wallets;
 	}
